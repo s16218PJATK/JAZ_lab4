@@ -1,0 +1,451 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Moviedb",
+		"_postman_id": "ccccca52-376f-cca9-567f-8d9d3d1c244e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Movie",
+			"request": {
+				"url": "http://localhost:8080/rest_moviedb_war_exploded/rest/movies",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Spiderman\",\n\t\"info\": \"First part!\"\n}"
+				},
+				"description": "POST"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Movie 2",
+			"request": {
+				"url": "http://localhost:8080/rest_moviedb_war_exploded/rest/movies",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Spiderman 2\",\n\t\"info\": \"Second part!\",\n\t\"rating\": 4.5\n}"
+				},
+				"description": "POST 2"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Movie 3",
+			"request": {
+				"url": "http://localhost:8080/rest_moviedb_war_exploded/rest/movies",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Spiderman 3\",\n\t\"info\": \"Third part!\",\n\t\"rating\": 4.5\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add actor",
+			"request": {
+				"url": "http://localhost:8080/rest_moviedb_war_exploded/rest/actors",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Fred\",\n\t\"surname\": \"Fredowski\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Show all movies",
+			"request": {
+				"url": "http://localhost:8080/rest_moviedb_war_exploded/rest/movies",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Show one movie",
+			"request": {
+				"url": "http://localhost:8080/rest_moviedb_war_exploded/rest/movies/2",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Edit one movie",
+			"request": {
+				"url": "http://localhost:8080/rest_moviedb_war_exploded/rest/movies/2",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Spiderman Edited\",\n\t\"info\": \"Edited part!\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add actor to movie",
+			"request": {
+				"url": "http://localhost:8080/rest_moviedb_war_exploded/rest/movies/2/actors/2",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete one movie",
+			"request": {
+				"url": "http://localhost:8080/rest_moviedb_war_exploded/rest/movies/3",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Show all actors",
+			"request": {
+				"url": "http://localhost:8080/rest_moviedb_war_exploded/rest/actors",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Show all actors in a movie",
+			"request": {
+				"url": "http://localhost:8080/rest_moviedb_war_exploded/rest/movies/2/actors",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Show one actor",
+			"request": {
+				"url": "http://localhost:8080/rest_moviedb_war_exploded/rest/actors/2",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Edit one actor",
+			"request": {
+				"url": "http://localhost:8080/rest_moviedb_war_exploded/rest/actors/2",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Derf\",\n    \"surname\": \"Derfowski\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Show movies of one actor",
+			"request": {
+				"url": "http://localhost:8080/rest_moviedb_war_exploded/rest/actors/2/movies",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Rate one movie for 5",
+			"request": {
+				"url": "http://localhost:8080/rest_moviedb_war_exploded/rest/movies/2/rating/5",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Rate again movie to see average",
+			"request": {
+				"url": "http://localhost:8080/rest_moviedb_war_exploded/rest/movies/2/rating/6",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Show one movie rating",
+			"request": {
+				"url": "http://localhost:8080/rest_moviedb_war_exploded/rest/movies/2/rating",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Remove actor from movie",
+			"request": {
+				"url": "http://localhost:8080/rest_moviedb_war_exploded/rest/movies/2/actors/2",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete actor",
+			"request": {
+				"url": "http://localhost:8080/rest_moviedb_war_exploded/rest/actors/2",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Comment movie",
+			"request": {
+				"url": "http://localhost:8080/rest_moviedb_war_exploded/rest/movies/2/comments",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"content\": \"Best movie so far!\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Comment movie again",
+			"request": {
+				"url": "http://localhost:8080/rest_moviedb_war_exploded/rest/movies/2/comments",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"content\": \"Can't wait for sequel!\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Show comment by ID",
+			"request": {
+				"url": "http://localhost:8080/rest_moviedb_war_exploded/rest/comments/3",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Show comments in movie",
+			"request": {
+				"url": "http://localhost:8080/rest_moviedb_war_exploded/rest/movies/2/comments",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete comment",
+			"request": {
+				"url": "http://localhost:8080/rest_moviedb_war_exploded/rest/comments/2",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "404 on deleted comment",
+			"request": {
+				"url": "http://localhost:8080/rest_moviedb_war_exploded/rest/comments/2",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
